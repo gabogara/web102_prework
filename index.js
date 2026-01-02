@@ -50,6 +50,7 @@ function addGamesToPage(games) {
   }
 
   // append the game to the games-container
+  gamesContainer.appendChild(gameCard);
 }
 
 // call the function we just defined using the correct variable
