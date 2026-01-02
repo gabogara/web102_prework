@@ -30,11 +30,13 @@ function addGamesToPage(games) {
   // loop over each item in the data
   for (let i = 0; i < games.length; i++) {
     const game = games[i];
+
+    // create a new div element, which will become the game card
+    const gameCard = document.createElement("div");
+
+    // add the class game-card to the list
+    gameCard.classList.add("game-card");
   }
-
-  // create a new div element, which will become the game card
-
-  // add the class game-card to the list
 
   // set the inner HTML using a template literal to display some info
   // about each game
