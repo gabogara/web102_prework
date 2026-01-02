@@ -47,10 +47,9 @@ function addGamesToPage(games) {
         <p>${game.description}</p>
         <p><strong>Pledged:</strong> $${game.pledged.toLocaleString()}</p>
     `;
+    // append the game to the games-container
+    gamesContainer.appendChild(gameCard);
   }
-
-  // append the game to the games-container
-  gamesContainer.appendChild(gameCard);
 }
 
 // call the function we just defined using the correct variable
