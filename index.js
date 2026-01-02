@@ -36,12 +36,18 @@ function addGamesToPage(games) {
 
     // add the class game-card to the list
     gameCard.classList.add("game-card");
-  }
 
-  // set the inner HTML using a template literal to display some info
-  // about each game
-  // TIP: if your images are not displaying, make sure there is space
-  // between the end of the src attribute and the end of the tag ("/>")
+    // set the inner HTML using a template literal to display some info
+    // about each game
+    // TIP: if your images are not displaying, make sure there is space
+    // between the end of the src attribute and the end of the tag ("/>")
+    gameCard.innerHTML = `
+        <img class="game-img" src="${game.img}" alt="${game.name}" />
+        <h3>${game.name}</h3>
+        <p>${game.description}</p>
+        <p><strong>Pledged:</strong> $${game.pledged.toLocaleString()}</p>
+    `;
+  }
 
   // append the game to the games-container
 }
