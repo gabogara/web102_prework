@@ -181,3 +181,39 @@ secondGameName.textContent = `${
   secondGame.name
 } — $${secondGame.pledged.toLocaleString()}`;
 secondGameContainer.appendChild(secondGameName);
+
+/********************************************************************
+ * ***************** Some customizations***************************
+ * Search filter by game name
+ */
+
+const searchInput = document.getElementById("search-input");
+const searchBtn = document.getElementById("search-btn");
+const clearSearchBtn = document.getElementById("clear-search-btn");
+
+function searchGames() {
+  deleteChildElements(gamesContainer);
+
+  const text = searchInput.value.trim().toLowerCase();
+
+  const filtered = GAMES_JSON.filter((game) =>
+    game.name.toLowerCase().includes(text)
+  );
+
+  addGamesToPage(filtered);
+}
+
+// Guard: only attach listeners if the elements exist in the HTML
+if (searchInput && searchBtn && clearSearchBtn) {
+  searchBtn.addEventListener("click", searchGames);
+
+  // press Enter to search
+  searchInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") searchGames();
+  });
+
+  clearSearchBtn.addEventListener("click", () => {
+    searchInput.value = "";
+    showAllGames();
+  });
+}
