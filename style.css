@@ -74,10 +74,31 @@ body {
   text-align: center;
 }
 
+#search-container {
+  text-align: center;
+  margin: 12px 0;
+}
+
+#search-input {
+  padding: 10px;
+  border-radius: 7px;
+  border: none;
+  width: 260px;
+}
+
 button {
   font-family: "Cabin";
   border: none;
   padding: 1%;
   margin: 1%;
   border-radius: 7px;
+}
+
+.nav-link {
+  margin-left: auto;
+  text-decoration: none;
+  background: white;
+  padding: 8px 12px;
+  border-radius: 7px;
+  color: #0a0e27;
 }
