@@ -150,7 +150,9 @@ const displayStr = `A total of $${totalRaised.toLocaleString()} has been raised 
 } unfunded. We need your help to fund these amazing games!`;
 
 // create a new DOM element containing the template string and append it to the description container
-
+const newP = document.createElement("p");
+newP.textContent = displayStr;
+descriptionContainer.appendChild(newP);
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
  * Skills used: spread operator, destructuring, template literals, sort
