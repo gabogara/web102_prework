@@ -73,6 +73,7 @@ const totalContributions = GAMES_JSON.reduce((acum, game) => {
 
 // grab the amount raised card, then use reduce() to find the total amount raised
 const raisedCard = document.getElementById("total-raised");
+const totalRaised = GAMES_JSON.reduce((sum, game) => sum + game.pledged, 0);
 
 // set inner HTML using template literal
 
